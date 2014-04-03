@@ -7,7 +7,7 @@ illustrate flow and behavior of a design.
 ## What's included?
 
 - [Bootstrap][bootstrap]
-- jQuery
+- [jQuery][jquery]
 - [Ember][ember]
 
 ## Getting Started
@@ -29,7 +29,7 @@ This will ask you for your administrator password. Enter the password and watch
 the matrix fly by. If everything went well you're all set up.
 
 Next, download the source of this project either using the Download button to
-the right of this text or with Git:
+the right or with Git:
 
 ```shell
 git clone git@github.com:max/saisho.git ~/Documents/saisho
@@ -71,7 +71,7 @@ example code:
 ```js
 // Note the template name "home"
 <script type="text/x-handlebars" data-template-name='home'>
-  ...
+  // ...
 </script>
 ```
 
@@ -79,7 +79,7 @@ example code:
 
 ```js
 ...
-  # The mapping of / (e.g. localhost:9000/) to the home template
+  // The mapping of / (e.g. localhost:9000/) to the home template
   this.resource('home', { path: '/' });
 ...
 ```
@@ -93,10 +93,10 @@ Let's assume we have two templates mapped to two routes:
 #### app.js
 
 ```js
-...
+// ...
   this.resource('home', { path: '/' });
   this.resource('blog', { path: '/blog' });
-...
+// ...
 ```
 
 If you want to link to the `blog` template from your `home` template here just
@@ -112,6 +112,7 @@ create a link as follows:
 That's pretty much it. Now you can link template to template to template...
 
 [bootstrap]: http://getboostrap.com/
+[jquery]: http://jquery.com/
 [ember]: http://emberjs.com/
 [harp]: http://harpjs.com/
 [node]: http://nodejs.org/
