@@ -69,8 +69,8 @@ example code:
 #### index.html
 
 ```js
-// Note the template name "home"
-<script type="text/x-handlebars" data-template-name='home'>
+// Note the template name 'home'
+<script type='text/x-handlebars' data-template-name='home'>
   // ...
 </script>
 ```
@@ -103,7 +103,7 @@ If you want to link to the `blog` template from your `home` template here just
 create a link as follows:
 
 ```html
-<script type="text/x-handlebars" data-template-name='home'>
+<script type='text/x-handlebars' data-template-name='home'>
   // Note the use of the # sign
   <a href='#/blog'>Blog</a>
 </script>
