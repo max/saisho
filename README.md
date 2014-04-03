@@ -121,8 +121,8 @@ developers mumble something about keeping code DRY (don't repeat yourself) you
 know copy and pasting the HTML is not a great idea. You would have to manually
 update every instance of that code.
 
-This is where partials and components come in. They serve a very similar purpose
-but with a slight distinction:
+This is where partials and components come into play. They serve a very similar
+purpose but with a slight distinction:
 
 - A partial will render as is in the template where you include it.
 - A component can have custom "settings" you can pass along every time you
