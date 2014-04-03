@@ -56,7 +56,7 @@ There are three files in your prototype directory:
 ### Templates
 
 If you open the `index.html` file you will see some boilerplate HTML, a sample
-template, and a layout. Saisho uses [Handlebar][handlebars] templates. Here's
+template, and a layout. Saisho uses [Handlebars][handlebars] templates. Here's
 how you use them:
 
 The layout gets applied as a wrapper to all your individual templates and is
