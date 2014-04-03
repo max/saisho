@@ -102,6 +102,8 @@ Let's assume we have two templates mapped to two routes:
 If you want to link to the `blog` template from your `home` template here just
 create a link as follows:
 
+#### index.html
+
 ```html
 <script type='text/x-handlebars' data-template-name='home'>
   // Note the use of the # sign.
