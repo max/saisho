@@ -162,7 +162,7 @@ rendered as is:
 
 Now an example using a component instead of a partial. The reason being we want
 to add a page header to the navigation that depends on the template we are
-showing – the HTMl has dynamic content therefor we can't use a partial:
+showing – the HTML has dynamic content therefor we can't use a partial:
 
 #### index.html
 
