@@ -111,6 +111,90 @@ create a link as follows:
 
 That's pretty much it. Now you can link template to template to template...
 
+### Partials and components
+
+It's only a matter of time until you want to display the same HTML on two
+templates – navigation bars would be a common use case. If you've ever heard
+developers mumble something about keeping code DRY (don't repeat yourself) you
+know copy and pasting the HTML is not a great idea. You would have to manually
+update every instance of that code.
+
+This is where partials and components come in. They serve a very similar purpose
+but with a slight distinction:
+
+- A partial will render as is in the template where you include it.
+- A component can have custom "settings" you can pass along every time you
+  include it.
+
+In this example we will include a shared navigation in both our `home` and
+`blog` template. The first example uses a partial because we want everything
+rendered as is:
+
+#### index.html
+
+```html
+...
+<!--
+  navbar partial
+  Note the _ at the beginning of the template name.
+-->
+<script type='text/x-handlebars' data-template-name='_navbar'>
+  <ul>
+    <li><a href='#/home'>Home</a></li>
+    <li><a href='#/blog'>Blog</a></li>
+  </ul>
+</script>
+
+<script type='text/x-handlebars' data-template-name='home'>
+  // Note the missing _ at the beginning of the template name.
+  {{partial 'navbar'}}
+  // ...
+</script>
+
+<script type='text/x-handlebars' data-template-name='blog'>
+  {{partial 'navbar'}}
+  // ...
+</script>
+...
+```
+
+Now an example using a component instead of a partial. The reason being we want
+to add a page header to the navigation that depends on the template we are
+showing – the HTMl has dynamic content therefor we can't use a partial:
+
+#### index.html
+
+```html
+...
+<!--
+  navbar component
+  Note the components/ prefix.
+-->
+<script type='text/x-handlebars' data-template-name='components/navbar'>
+  <h1>{{title}}</h1>
+
+  <ul>
+    <li><a href='#/home'>Home</a></li>
+    <li><a href='#/blog'>Blog</a></li>
+  </ul>
+</script>
+
+<script type='text/x-handlebars' data-template-name='home'>
+  // Components can be referenced by their name directly.
+  {{navbar title='Welcome to my UI prototype'}}
+  // ...
+</script>
+
+<script type='text/x-handlebars' data-template-name='blog'>
+  {{navbar title='A blog about prototypes'}}
+  // ...
+</script>
+...
+```
+
+Now you know how to share HTML between different templates. Some common use
+cases are headers, footers, sidebars, etc.
+
 [bootstrap]: http://getboostrap.com/
 [jquery]: http://jquery.com/
 [ember]: http://emberjs.com/
