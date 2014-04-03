@@ -79,7 +79,7 @@ example code:
 
 ```js
 ...
-  // The mapping of / (e.g. localhost:9000/) to the home template
+  // The mapping of / (e.g. localhost:9000/) to the home template.
   this.resource('home', { path: '/' });
 ...
 ```
@@ -104,7 +104,7 @@ create a link as follows:
 
 ```html
 <script type='text/x-handlebars' data-template-name='home'>
-  // Note the use of the # sign
+  // Note the use of the # sign.
   <a href='#/blog'>Blog</a>
 </script>
 ```
